@@ -22,8 +22,9 @@ void displayMenu() {
     printf("3. Modificar Estado da Tarefa\n");
     printf("4. Deletar Tarefa\n");
     printf("5. Alterar Tarefa\n");
-    printf("6. Sair\n");
-    printf("Escolha uma opção (1/2/3/4/5/6): ");
+    printf("6. Filtrar Tarefas por Prioridade\n");
+    printf("7. Sair\n");
+    printf("Escolha uma opção (1/2/3/4/5/6/7): ");
 }
 
 int main() {
@@ -111,7 +112,7 @@ int main() {
                 }
             }
         } else if (choice == 4) {
-            // Código para deletar tarefa (sem alterações necessárias)
+            // Código para deletar tarefa
         } else if (choice == 5) {
             if (numTasks == 0) {
                 printf("A lista de tarefas está vazia.\n");
@@ -180,6 +181,23 @@ int main() {
                 }
             }
         } else if (choice == 6) {
+            // Filtrar tarefas por prioridade
+            printf("Filtrar Tarefas por Prioridade (0-10): ");
+            int filterPriority;
+            scanf("%d", &filterPriority);
+
+            printf("Tarefas com Prioridade %d:\n", filterPriority);
+            for (int i = 0; i < numTasks; i++) {
+                if (taskList[i].priority == filterPriority) {
+                    printf("Tarefa %d:\n", i + 1);
+                    printf("Prioridade: %d\n", taskList[i].priority);
+                    printf("Descrição: %s\n", taskList[i].description);
+                    printf("Categoria: %s\n", taskList[i].category);
+                    printf("Status: %s\n", taskList[i].status == NAO_INICIADO ? "NÃO INICIADO" : 
+                                                taskList[i].status == EM_ANDAMENTO ? "EM ANDAMENTO" : "COMPLETO");
+                }
+            }
+        } else if (choice == 7) {
             // Fechar o arquivo e sair
             fclose(file);
             break;
