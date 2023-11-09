@@ -23,8 +23,9 @@ void displayMenu() {
     printf("4. Deletar Tarefa\n");
     printf("5. Alterar Tarefa\n");
     printf("6. Filtrar Tarefas por Prioridade\n");
-    printf("7. Sair\n");
-    printf("Escolha uma opção (1/2/3/4/5/6/7): ");
+    printf("7. Filtrar Tarefas por Estado\n");
+    printf("8. Sair\n");
+    printf("Escolha uma opção (1/2/3/4/5/6/7/8): ");
 }
 
 int main() {
@@ -73,14 +74,14 @@ int main() {
             if (numTasks == 0) {
                 printf("A lista de tarefas está vazia.\n");
             } else {
-                printf("Tarefas:\n");
+                printf("Tarefas:\n\n");
                 for (int i = 0; i < numTasks; i++) {
                     printf("Tarefa %d:\n", i + 1);
                     printf("Prioridade: %d\n", taskList[i].priority);
                     printf("Descrição: %s\n", taskList[i].description);
                     printf("Categoria: %s\n", taskList[i].category);
-                    printf("Status: %s\n", taskList[i].status == NAO_INICIADO ? "NÃO INICIADO" : 
-                                                taskList[i].status == EM_ANDAMENTO ? "EM ANDAMENTO" : "COMPLETO");
+                    printf("Status: %s\n", taskList[i].status == NAO_INICIADO ? "NÃO INICIADO\n" : 
+                                                taskList[i].status == EM_ANDAMENTO ? "EM ANDAMENTO\n" : "COMPLETO\n");
                 }
             }
         } else if (choice == 3) {
@@ -193,11 +194,29 @@ int main() {
                     printf("Prioridade: %d\n", taskList[i].priority);
                     printf("Descrição: %s\n", taskList[i].description);
                     printf("Categoria: %s\n", taskList[i].category);
-                    printf("Status: %s\n", taskList[i].status == NAO_INICIADO ? "NÃO INICIADO" : 
-                                                taskList[i].status == EM_ANDAMENTO ? "EM ANDAMENTO" : "COMPLETO");
+                    printf("Status: %s\n", taskList[i].status == NAO_INICIADO ? "NÃO INICIADO\n" : 
+                                                taskList[i].status == EM_ANDAMENTO ? "EM ANDAMENTO\n" : "COMPLETO\n");
                 }
             }
         } else if (choice == 7) {
+            // Filtrar tarefas por estado
+            printf("Filtrar Tarefas por Estado (0 - NÃO INICIADO, 1 - EM ANDAMENTO, 2 - COMPLETO): ");
+            int filterStatus;
+            scanf("%d", &filterStatus);
+
+            printf("Tarefas com Estado %s:\n", filterStatus == NAO_INICIADO ? "NÃO INICIADO\n" : 
+                                                filterStatus == EM_ANDAMENTO ? "EM ANDAMENTO\n" : "COMPLETO\n");
+            for (int i = 0; i < numTasks; i++) {
+                if (taskList[i].status == filterStatus) {
+                    printf("Tarefa %d:\n", i + 1);
+                    printf("Prioridade: %d\n", taskList[i].priority);
+                    printf("Descrição: %s\n", taskList[i].description);
+                    printf("Categoria: %s\n", taskList[i].category);
+                    printf("Status: %s\n", taskList[i].status == NAO_INICIADO ? "NÃO INICIADO\n" : 
+                                                taskList[i].status == EM_ANDAMENTO ? "EM ANDAMENTO\n" : "COMPLETO\n");
+                }
+            }
+        } else if (choice == 8) {
             // Fechar o arquivo e sair
             fclose(file);
             break;
