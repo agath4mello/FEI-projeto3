@@ -15,10 +15,11 @@ Nesta função, é apresentada na tela as tarefas que possuem a prioridade escol
 A mesma lógica da função anterior. A diferença, neste caso, é que a chave principal da busca do sistema é o estado em que a tarefa se enquadra, ou seja, se o usuário escolher o estado "NÃO INICIADO", por exemplo, todas as tarefas que se adequam a busca serão apresentadas na tela.
 • 5° Função: Filtrar tarefas por categoria
 Detém a mesma lógica dos dois filtros anteriores (acima), contudo o filtro é realizado por categoria, enquanto que a prioridade é ordenada descrescentemente (maior para menor).
+• 6° Funçao: Filtrar tarefas por prioridade e categoria
+Detém a mesma lógica dos dois filtros anteriores (acima), contudo o filtro é realizado por categoria e prioridade, onde o programa exibe as tarefas que passam por eles.
 
------- até aqui CLion está funcionando normalmente. ------ 
+------ até aqui CLion estava funcionando normalmente. ------ 
 
-6° funçao - Filtrar tarefas por prioridade e categoria: junção das duas funções anteriores em que o usuário escolhe a categoria e a prioridade e o seu programa deve exibir as tarefas que passarem pelos dois filtros;
 7° funçao - Exportar tarefas por prioridade: seu programa deve gerar um arquivo texto listando apenas as tarefas da prioridade escolhida pelo usuário. Cada tarefa deve estar em uma linha do arquivo na sequência: prioridade, categoria, estado e descrição;
 8° funçao - Exportar tarefas por categoria: idem ao anterior, inclusive no formato do arquivo exportado, sendo que as tarefas devem estar ordenadas por prioridade;
 9° funçao - Exportar tarefas por prioridade e categoria: junção dos filtros anteriores, mantendo o formato do arquivo que deve ser exportado.
