@@ -18,10 +18,33 @@ Detém a mesma lógica dos dois filtros anteriores (acima), contudo o filtro é 
 • 6° Funçao: Filtrar tarefas por prioridade e categoria
 Detém a mesma lógica dos dois filtros anteriores (acima), contudo o filtro é realizado por categoria e prioridade, onde o programa exibe as tarefas que passam por eles.
 
------- até aqui CLion estava funcionando normalmente. ------ 
+Obs.: ------ até aqui CLion estava funcionando normalmente. ------ 
 
-7° funçao - Exportar tarefas por prioridade: seu programa deve gerar um arquivo texto listando apenas as tarefas da prioridade escolhida pelo usuário. Cada tarefa deve estar em uma linha do arquivo na sequência: prioridade, categoria, estado e descrição;
-8° funçao - Exportar tarefas por categoria: idem ao anterior, inclusive no formato do arquivo exportado, sendo que as tarefas devem estar ordenadas por prioridade;
-9° funçao - Exportar tarefas por prioridade e categoria: junção dos filtros anteriores, mantendo o formato do arquivo que deve ser exportado.
+Lista de funções que não foram adicionadas na segunda etapa:
+• 7° Funçao: Exportar tarefas por prioridade
+Nesta função, o programa gera um arquivo texto, apresentando apenas as tarefas escolhidas pelo usuário, respeitando a seguinte sequência:
+  · Prioridade;
+  · Categoria;
+  · Estado;
+  · Descrição.
+Caso a sequência não seja obedecida, então o programa deverá gerar uma mensagem de erro.
+• 8° Funçao: Exportar tarefas por categoria
+Idem ao anterior, inclusive no formato do arquivo exportado, contudo as tarefas devem estar ordenadas por prioridade.
+• 9° Funçao: Exportar tarefas por prioridade e categoria
+É a junção dos filtros anteriores, mas mantendo o formato do arquivo que deve ser exportado.
+• 10° Função: Armazenamento do estado da tarefa
+Nesta função, deve ser realizado alterações nas funções anteriores para aceitar o armazenamento do estado da tarefa.
+Extra: Além destas, você deve alterar as funções que já foram implementadas para aceitar o armazenamento do estado da tarefa, ou seja, deve ser possível realizar alterações no estado, como "Não Iniciado", "Em Andamento" ou "Completo".
 
-Extra: Além destas, você deve alterar as funções que já foram implementadas para aceitar o armazenamento do estado da tarefa.
+Tecnologias utilizadas:
+• Arquivos Binários em C
+• Biblioteca Padrão de C
+• Compilador C
+• Enumerações em C
+• Linguagem de Programação C
+
+Inicialização:
+O programa pode/deve ser inicializado normalmente através de um compilador que suporte a linguagem C. Entretanto, caso ocorra alguma falha, você pode acessar https://replit.com/@AgathaMello/FEI-projeto3
+
+Implementações futuras:
+As implementações futuras para este projeto envolvem conseguir finalizar a inserção das tarefas faltantes no item "Lista de funções que não foram adicionadas na segunda etapa".
