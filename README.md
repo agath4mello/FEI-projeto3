@@ -18,7 +18,7 @@ Detém a mesma lógica dos dois filtros anteriores (acima), contudo o filtro é 
 • 6° Funçao: Filtrar tarefas por prioridade e categoria
 Detém a mesma lógica dos dois filtros anteriores (acima), contudo o filtro é realizado por categoria e prioridade, onde o programa exibe as tarefas que passam por eles.
 
-Obs.: ------ até aqui CLion estava funcionando normalmente. ------ 
+Obs.: ------ até aqui CLion/Replit estava/m funcionando normalmente. ------ 
 
 Lista de funções que não foram adicionadas na segunda etapa:
 • 7° Funçao: Exportar tarefas por prioridade
